@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>{{ flatpage.title }}</title>
-</head>
-<body>
+{% extends 'flatpages/default.html' %}
+{% block title %} {{ flatpage.title }} {% endblock title %}
+{% block content %}
 <h2 style="text-align: center;"><span style="text-decoration: underline;"><em>{{ flatpage.title }}</em></span></h2>
 <hr />
-<h3><img src="https://html5-editor.net/tinymce/plugins/emoticons/img/smiley-embarassed.gif" alt="embarassed" />&nbsp;Наши контакты:</h3>
-<p>{{ flatpage.content }} {{ flatpage.content }}</p>
-</body>
-</html>
+<h3><img src="https://html5-editor.net/tinymce/plugins/emoticons/img/smiley-embarassed.gif" alt="embarassed" />&nbsp;<span style="text-decoration: underline;"><em><strong><span style="color: #ff0000; text-decoration: underline;">Наши контакты: {{ flatpage.content }}</span></strong></em></span></h3>
+{% endblock content %}
